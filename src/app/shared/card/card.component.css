@@ -1,0 +1,21 @@
+.example-card {
+    max-width: 400px;
+
+}
+  
+.example-header-image {
+    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+    background-size: cover;
+}
+
+.card-title {
+  color: white;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* Espaçamento entre os cards */
+  justify-content: center; /* Centraliza os cards horizontalmente */
+  margin-top: 20px; /* Espaçamento entre o botão e os cards */
+}

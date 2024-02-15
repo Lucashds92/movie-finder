@@ -1,0 +1,20 @@
+<form class="example-form">
+    <table class="example-full-width" cellspacing="0">
+        <tr>
+            <td>
+                <mat-form-field class="example-full-width">
+                    <mat-label>Movie</mat-label>
+                    <input matInput #movieInput>
+                </mat-form-field>
+            </td>
+        </tr>
+    </table>
+
+    <div class="example-button-row">
+        <button mat-raised-button color="primary" (click)="findMovie(movieInput.value)">Find</button>
+    </div>
+</form>
+
+<app-container>
+    <app-card [movie]="movie"></app-card>
+</app-container>

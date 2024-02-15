@@ -1,0 +1,31 @@
+.example-header-image {
+    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+    background-size: cover;
+}
+
+.card-title, .movie-text {
+  color: white;
+}
+
+.movie-text{
+  margin-top: 15px;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* Espaçamento entre os cards */
+  justify-content: center; /* Centraliza os cards horizontalmente */
+  margin-top: 20px; /* Espaçamento entre o botão e os cards */
+}
+
+.example-card {
+  width: 300px; /* Largura dos cards */
+  flex: 1 1 300px; /* Flex grow, flex shrink, flex basis */
+}
+
+@media screen and (max-width: 600px) {
+  .example-card {
+    width: calc(100% - 40px); /* Ajusta a largura dos cards para 100% da largura da tela com um espaço de 40px nas laterais */
+  }
+}
