@@ -1,5 +1,4 @@
 import { Component, Input } from '@angular/core';
-import { Router } from '@angular/router';
 import { MoviesService } from 'src/app/core/services/movies.service';
 import { Movie } from 'src/app/core/types/types';
 

@@ -16,5 +16,5 @@
 </form>
 
 <app-container>
-    <app-card [movie]="movie"></app-card>
+    <app-card *ngIf="movie" [movie]="movie"></app-card>
 </app-container>

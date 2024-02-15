@@ -21,6 +21,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { MovieComponent } from './pages/movie/movie.component';
 import { DetailsComponent } from './shared/details/details.component';
 import { MatGridListModule } from '@angular/material/grid-list';
+import { MatDividerModule } from '@angular/material/divider';
 
 @NgModule({
   declarations: [
@@ -46,7 +47,8 @@ import { MatGridListModule } from '@angular/material/grid-list';
     MatInputModule,
     FormsModule,
     HttpClientModule,
-    MatGridListModule
+    MatGridListModule,
+    MatDividerModule
   ],
   providers: [],
   bootstrap: [AppComponent]

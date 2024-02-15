@@ -24,6 +24,10 @@
   flex: 1 1 300px; /* Flex grow, flex shrink, flex basis */
 }
 
+.noMovie {
+  margin-top: 20px;
+}
+
 @media screen and (max-width: 600px) {
   .example-card {
     width: calc(100% - 40px); /* Ajusta a largura dos cards para 100% da largura da tela com um espaço de 40px nas laterais */

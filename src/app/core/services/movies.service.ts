@@ -12,7 +12,7 @@ export class MoviesService {
 
   private apiUrl: string = environment.apiUrl
 
-  movie!: Movie;
+  private movie: Movie | null = null;
 
   constructor(
     private httpClient: HttpClient,
@@ -29,5 +29,13 @@ export class MoviesService {
 
   backHome() {
     this.router.navigate(['/']);
+  }
+
+  setMovieDetails(movie: Movie) {
+    this.movie = movie;
+  }
+
+  getMovieDetails(): Movie | null {
+    return this.movie;
   }
 }

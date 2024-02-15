@@ -2,38 +2,44 @@
     <mat-icon>arrow_circle_left</mat-icon>
 </button>
 
-<div class="container">
+<div *ngIf="movie; else noMovie" class="container">
     <mat-card class="example-card">
         <mat-card-header>
-            <mat-card-title class="card-title">Título</mat-card-title>
-            <mat-card-subtitle>2024</mat-card-subtitle>
+            <mat-card-title class="card-title">{{ movie.Title }}</mat-card-title>
+            <mat-card-subtitle>{{ movie.Year }}</mat-card-subtitle>
         </mat-card-header>
-        <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
-        <mat-card-content>
+        <mat-card-content class="movie-text">
+
+            <mat-divider></mat-divider>
+
+            <p>Type: {{ movie.Type }}</p>
+            <p>Genre: {{ movie.Genre }}</p>
+            <p>Released: {{ movie.Released }}</p>
+            <p>Runtime: {{ movie.Runtime }}</p>
+            <p>Awards: {{ movie.Awards }}</p>
+            <p>IMDB Votes: {{ movie.imdbVotes }}</p>
+            <p>IMDB Rating: {{ movie.imdbRating }}</p>
+            <p>Box Office: {{ movie.BoxOffice }}</p>
+            <p>Director: {{ movie.Director }}</p>
+            <p>Writer: {{ movie.Writer }}</p>
+            <p>Actors: {{ movie.Actors }}</p>
+            <p>Language: {{ movie.Language }}</p>
+            <p>Country: {{ movie.Country }}</p>
+
+            <mat-divider></mat-divider>
+
             <p class="movie-text">
-                The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
-                A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
-                bred for hunting.
+                Plot: {{ movie.Plot }}
             </p>
         </mat-card-content>
     </mat-card>
 
     <mat-card class="example-card">
-        <mat-card-content class="movie-text">
-            <p>Type: </p>
-            <p>Genre: </p>
-            <p>Released: </p>
-            <p>Runtime: </p>
-            <p>Awards: </p>
-            <p>Rated: </p>
-            <p>IMDB Votes: </p>
-            <p>IMDB Rating: </p>          
-            <p>Box Office: </p>         
-            <p>Director: </p>
-            <p>Writer: </p>
-            <p>Actors: </p>
-            <p>Language: </p>
-            <p>Country: </p>           
-        </mat-card-content>
+        <img mat-card-image src="{{ movie.Poster }}" alt="Movie Poster">
     </mat-card>
 </div>
+
+
+<ng-template #noMovie>
+    <p class="noMovie">Nenhum filme encontrado.</p>
+</ng-template>

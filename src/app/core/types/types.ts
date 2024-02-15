@@ -1,7 +1,6 @@
 export interface Movie{
     Title: string
     Year: string
-    Rated: string
     Released: string
     Runtime: string
     Genre: string
@@ -16,5 +15,5 @@ export interface Movie{
     imdbRating: string
     imdbVotes: string
     Type: string
-    boxOffice: string
+    BoxOffice: string
 }

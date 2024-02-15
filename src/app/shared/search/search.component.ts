@@ -9,15 +9,21 @@ import { Movie } from 'src/app/core/types/types';
 })
 export class SearchComponent {
 
-  movie!: Movie;
+  movie: Movie | null = null;
 
   constructor(private moviesService: MoviesService) {}
 
   findMovie(movieTitle: string) {
-    this.moviesService.find(movieTitle)
+    const formattedMovieTitle = this.formatMovieTitle(movieTitle);
+    this.moviesService.find(formattedMovieTitle)
       .subscribe(
         answer => {
         this.movie = answer
+        this.moviesService.setMovieDetails(this.movie);
       })
+  }
+
+  formatMovieTitle(movieTitle: string): string {
+    return movieTitle.replace(/\s+/g, '+');
   }
 }

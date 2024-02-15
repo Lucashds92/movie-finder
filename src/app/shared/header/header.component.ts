@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { MoviesService } from 'src/app/core/services/movies.service';
 
 @Component({
   selector: 'app-header',
@@ -6,5 +7,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent {
+
+  constructor(private moviesService: MoviesService){}
+
+  backHome() {
+    this.moviesService.backHome();
+  }
 
 }
