@@ -17,6 +17,7 @@
   gap: 20px; /* Espaçamento entre os cards */
   justify-content: center; /* Centraliza os cards horizontalmente */
   margin-top: 20px; /* Espaçamento entre o botão e os cards */
+  padding-bottom: 60px;
 }
 
 .example-card {
