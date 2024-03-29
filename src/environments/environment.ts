@@ -1,3 +1,3 @@
 export const environment = {
-    apiUrl: 'https://api.moviefinder.com/'
+    apiUrl: 'https://www.omdbapi.com/'
 };
